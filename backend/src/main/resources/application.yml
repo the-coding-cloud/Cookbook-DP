@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          time_zone: UTC
+    open-in-view: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cookbook
+    username: postgres
+    password: oana1234
+    platform: postgres
+    hikari:
+      max-lifetime: 300000
+      idle-timeout: 300000
+      connection-timeout: 30000
+    dbcp2:
+      test-while-idle: true
+      test-on-borrow: true
